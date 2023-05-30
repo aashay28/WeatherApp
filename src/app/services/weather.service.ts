@@ -14,7 +14,8 @@ export class WeatherService {
     return this.http.get<WeatherData>(environment.weatherApiBaseUrl, {
       params: new HttpParams()
         .set('q', cityName)
-        .set('appid', environment.apiKey),
+        .set('appid', environment.apiKey)
+        .set('units', 'metric'),
     });
   }
 }
